@@ -7,115 +7,74 @@
   <meta name="description" content="Camisetas artísticas AOP con valor narrativo y estético. Descubre ResilIsA: arte, resiliencia y moda única.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- HEADER -->
-  <header>
-    <nav class="navbar">
-      <a href="#home"><img src="logo-blanco.png" alt="ResilIsA Logo" class="logo"></a>
-      <ul class="nav-links">
-        <li><a href="#colecciones">Colección</a></li>
-        <li><a href="#historia">Nuestra Historia</a></li>
-        <li><a href="#metodo">Método</a></li>
-        <li><a href="#blog">Bitácora</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
+  <header class="main-header">
+    <a href="#" class="logo"><img src="logo-blanco.png" alt="ResilIsA Logo"></a>
+    <nav class="main-nav">
+      <a href="#coleccion">Colección</a>
+      <a href="#historia">Nuestra Historia</a>
+      <a href="#contacto">Contacto</a>
     </nav>
   </header>
 
-  <!-- HOME / LANDING -->
-  <section id="home" class="hero">
-    <img src="logo-blanco.png" alt="ResilIsA Logo" class="hero-logo">
-    <h1>ART YOU WEAR</h1>
-    <p>
-      ResilIsA es mucho más que una marca de ropa: es una declaración de identidad y resiliencia.<br>
-      Cada camiseta es una obra de arte, creada con pasión, tecnología y una historia real detrás.
-    </p>
-    <a href="#colecciones" class="cta">Descubre la colección</a>
-  </section>
-
-  <!-- COLECCIONES / TIENDA -->
-  <section id="colecciones" class="collections">
-    <h2>Colecciones</h2>
-    <div class="collection-group">
-      <h3>Colección Origen</h3>
-      <div class="product-gallery">
-        <div class="product-card">
-          <img src="camiseta-arbol-biblioteca.png" alt="The Last Library">
-          <h4>The Last Library</h4>
-        </div>
-        <div class="product-card">
-          <img src="camiseta-corazon-galaxia.png" alt="Anatomy of Flight">
-          <h4>Anatomy of Flight</h4>
-        </div>
-      </div>
-      <h3>Cápsula Rift</h3>
-      <div class="product-gallery">
-        <div class="product-card">
-          <img src="camiseta-rojo-negro.png" alt="Bio-Mechanical Bloom">
-          <h4>Bio-Mechanical Bloom</h4>
-        </div>
-        <div class="product-card">
-          <img src="camiseta-arana-cielo.png" alt="Suburban Inversion">
-          <h4>Suburban Inversion</h4>
-        </div>
-      </div>
-      <p class="gallery-note">Más de 15 diseños originales. Edición limitada, calidad premium, impresión all-over.</p>
+  <!-- HERO FULLSCREEN -->
+  <section class="hero-fullscreen">
+    <img src="portada.jpg" alt="Hero ResilIsA" class="hero-bg">
+    <div class="hero-content">
+      <h1>ART YOU WEAR</h1>
+      <p>Camisetas únicas con arte, tecnología y resiliencia.<br>Edición limitada, impresas all-over.</p>
+      <a href="#coleccion" class="cta">Descubre la colección</a>
     </div>
   </section>
 
-  <!-- NUESTRA HISTORIA -->
-  <section id="historia" class="about">
-    <h2>Nuestra historia</h2>
-    <p>
-      ResilIsA nace de la unión entre la resiliencia y el arte digital, honrando la memoria de Isa, mi madre, quien me enseñó el verdadero significado de levantarse y seguir adelante. El colibrí wireframe es símbolo de esa fuerza: ligereza, velocidad, renacimiento.<br>
-      Mi historia es de reconstrucción: superé adicciones, pérdidas y adversidad, impulsado por el amor a mis hijas y el ejemplo de mi madre. Hoy, ResilIsA es mi manera de transformar experiencias en arte y esperanza, tejiendo cada diseño con inspiración, tecnología y humanidad.
-    </p>
+  <!-- COLECCIÓN DESTACADA -->
+  <section id="coleccion" class="coleccion">
+    <h2 class="section-title">Colección Destacada</h2>
+    <div class="galeria-productos">
+      <div class="producto">
+        <img src="producto1.jpg" alt="The Last Library">
+        <div class="producto-titulo">The Last Library</div>
+      </div>
+      <div class="producto">
+        <img src="producto2.jpg" alt="Anatomy of Flight">
+        <div class="producto-titulo">Anatomy of Flight</div>
+      </div>
+      <div class="producto">
+        <img src="producto3.jpg" alt="Bio-Mechanical Bloom">
+        <div class="producto-titulo">Bio-Mechanical Bloom</div>
+      </div>
+      <div class="producto">
+        <img src="producto4.jpg" alt="Suburban Inversion">
+        <div class="producto-titulo">Suburban Inversion</div>
+      </div>
+    </div>
   </section>
 
-  <!-- MÉTODO RESILISA -->
-  <section id="metodo" class="method">
-    <h2>El Método ResilIsA</h2>
-    <ul>
-      <li>Inspiración: tecnología, humanidad, filosofía, cultura pop</li>
-      <li>Estilos: glitch-cyberpunk, blueprint técnico, surrealismo digital y remix de iconos</li>
-      <li>Cada diseño es único, reinterpretando símbolos y atmósferas sin copiar personajes o marcas</li>
-    </ul>
-    <strong>Ejemplo de inspiración:</strong>
-    <p>
-      Universos como Stranger Things, Blade Runner, Dune, Elden Ring, Cyberpunk 2077.<br>
-      El proceso: abstracción, relectura simbólica, atmósfera y narrativa propia.
-    </p>
+  <!-- HISTORIA -->
+  <section id="historia" class="historia">
+    <div class="historia-content">
+      <h2 class="section-title">Nuestra Historia</h2>
+      <p>
+        ResilIsA nace de la unión entre la resiliencia y el arte digital, honrando la memoria de Isa, mi madre, quien me enseñó el verdadero significado de levantarse y seguir adelante.<br>
+        Cada camiseta es una obra de arte, inspirada en tecnología, filosofía y cultura pop.<br>
+        Edición limitada, calidad premium, impresión all-over.<br>
+      </p>
+    </div>
   </section>
 
-  <!-- BITÁCORA / BLOG -->
-  <section id="blog" class="blog">
-    <h2>Bitácora</h2>
-    <ul>
-      <li>Documentación real de cada paso: costos, tiempos, unboxings, control de calidad</li>
-      <li>Aprendizajes, desafíos y avances</li>
-      <li>Historias de clientes y comunidad</li>
-      <li>Novedades y lanzamientos</li>
-    </ul>
-    <p>La transparencia es parte de la esencia ResilIsA. El viaje es tan importante como el resultado.</p>
-  </section>
-
-  <!-- CONTACTO / COMUNIDAD -->
-  <section id="contacto" class="contact">
-    <h2>Contacto & Comunidad</h2>
-    <p>¿Querés saber más? ¿Compartir tu historia de resiliencia? ¿Colaborar o distribuir ResilIsA?</p>
-    <ul>
+  <!-- CONTACTO -->
+  <section id="contacto" class="contacto">
+    <h2 class="section-title">Contacto & Comunidad</h2>
+    <p>¿Querés saber más o colaborar? Escribinos:</p>
+    <ul class="contacto-links">
       <li>Email: <a href="mailto:isa@resilisa.store">isa@resilisa.store</a></li>
       <li>Instagram: <a href="https://instagram.com/resilisa.store" target="_blank">@resilisa.store</a></li>
       <li>TikTok: <a href="https://tiktok.com/@resilisa.store" target="_blank">@resilisa.store</a></li>
     </ul>
-    <form class="contact-form">
-      <input type="text" placeholder="Tu nombre" required>
-      <input type="email" placeholder="Tu email" required>
-      <textarea placeholder="Mensaje"></textarea>
-      <button type="submit">Enviar</button>
-    </form>
   </section>
 
   <!-- FOOTER -->
@@ -123,12 +82,6 @@
     <img src="logo-blanco.png" alt="ResilIsA Logo" class="footer-logo">
     <p>ResilIsA® — ART YOU WEAR</p>
     <p>© 2025 Todos los derechos reservados</p>
-    <p>Inspirado en la resiliencia y la memoria de Isa</p>
-    <div class="footer-links">
-      <a href="https://instagram.com/resilisa.store" target="_blank">Instagram</a> ·
-      <a href="https://tiktok.com/@resilisa.store" target="_blank">TikTok</a> ·
-      <a href="mailto:isa@resilisa.store">Email</a>
-    </div>
   </footer>
 </body>
 </html>
