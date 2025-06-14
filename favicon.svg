@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Wireframe colibrí (simplificado para favicon) -->
+  <g stroke="#000" stroke-width="2" fill="none">
+    <!-- Cuerpo -->
+    <path d="M20 48 Q30 38 40 44 Q36 32 28 32 Q24 36 20 48" />
+    <!-- Ala principal -->
+    <path d="M32 32 Q28 20 20 18 Q29 21 34 30" />
+    <!-- Ala secundaria -->
+    <path d="M30 28 Q24 10 10 12 Q22 16 30 28" />
+    <!-- Pico -->
+    <path d="M42 32 L60 26" />
+    <!-- Cabeza -->
+    <ellipse cx="40" cy="32" rx="4" ry="4" />
+    <!-- Ojo -->
+    <circle cx="42" cy="32" r="0.7" fill="#000"/>
+  </g>
+</svg>
