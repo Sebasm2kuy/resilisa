@@ -1,87 +1,83 @@
-<!DOCTYPE html>
-<html lang="es">
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ResilIsA - ART YOU WEAR</title>
-  <meta name="description" content="Camisetas artísticas AOP con valor narrativo y estético. Descubre ResilIsA: arte, resiliencia y moda única.">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,400&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResilIsA - ART YOU WEAR</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- HEADER -->
-  <header class="main-header">
-    <a href="#" class="logo"><img src="logo-blanco.png" alt="ResilIsA Logo"></a>
-    <nav class="main-nav">
-      <a href="#coleccion">Colección</a>
-      <a href="#historia">Nuestra Historia</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </header>
+    <!-- Fixed Navigation Bar -->
+    <header class="navbar">
+        <div class="navbar-logo">
+            <img src="assets/logo-blanco.png" alt="ResilIsA Logo">
+        </div>
+        <nav class="navbar-nav">
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#collection">Collection</a></li>
+                <li><a href="#story">Our Story</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- HERO FULLSCREEN -->
-  <section class="hero-fullscreen">
-    <div class="hero-bg"></div>
-    <div class="hero-content">
-      <h1>ART YOU WEAR</h1>
-      <p>Camisetas únicas con arte, tecnología y resiliencia.<br>Edición limitada, impresas all-over.</p>
-      <a href="#coleccion" class="cta">Descubre la colección</a>
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1>ART YOU WEAR</h1>
+            <p>Unique t-shirts with art, technology, and resilience. Limited edition, all-over printed.</p>
+            <a href="#collection" class="cta-button">Explore Collection</a>
+        </div>
+    </section>
 
-  <!-- COLECCIÓN DESTACADA -->
-  <section id="coleccion" class="coleccion">
-    <h2 class="section-title">Colección Destacada</h2>
-    <div class="galeria-productos">
-      <div class="producto">
-        <img src="producto1.jpg" alt="The Last Library">
-        <div class="producto-titulo">The Last Library</div>
-      </div>
-      <div class="producto">
-        <img src="producto2.jpg" alt="Anatomy of Flight">
-        <div class="producto-titulo">Anatomy of Flight</div>
-      </div>
-      <div class="producto">
-        <img src="producto3.jpg" alt="Bio-Mechanical Bloom">
-        <div class="producto-titulo">Bio-Mechanical Bloom</div>
-      </div>
-      <div class="producto">
-        <img src="producto4.jpg" alt="Suburban Inversion">
-        <div class="producto-titulo">Suburban Inversion</div>
-      </div>
-    </div>
-  </section>
+    <!-- Featured Collection Section -->
+    <section id="collection" class="collection-section">
+        <h2>Featured Collection</h2>
+        <div class="products-grid">
+            <div class="product-item">
+                <img src="assets/producto1.jpg" alt="Product 1: The Last Library">
+                <p>The Last Library</p>
+            </div>
+            <div class="product-item">
+                <img src="assets/producto2.jpg" alt="Product 2: Anatomy of Flight">
+                <p>Anatomy of Flight</p>
+            </div>
+            <div class="product-item">
+                <img src="assets/producto3.jpg" alt="Product 3: Bio-Mechanical Bloom">
+                <p>Bio-Mechanical Bloom</p>
+            </div>
+            <div class="product-item">
+                <img src="assets/producto4.jpg" alt="Product 4: Suburban Inversion">
+                <p>Suburban Inversion</p>
+            </div>
+        </div>
+    </section>
 
-  <!-- HISTORIA -->
-  <section id="historia" class="historia">
-    <div class="historia-content">
-      <h2 class="section-title">Nuestra Historia</h2>
-      <p>
-        ResilIsA nace de la unión entre la resiliencia y el arte digital, honrando la memoria de Isa, mi madre, quien me enseñó el verdadero significado de levantarse y seguir adelante.<br>
-        Cada camiseta es una obra de arte, inspirada en tecnología, filosofía y cultura pop.<br>
-        Edición limitada, calidad premium, impresión all-over.<br>
-      </p>
-    </div>
-  </section>
+    <!-- Our Story Section -->
+    <section id="story" class="story-section">
+        <h2>Our Story</h2>
+        <p>ResilIsA was born from the union of resilience and digital art, honoring the memory of Isa, my mother. Each t-shirt is a piece inspired by technology, philosophy, and pop culture.</p>
+    </section>
 
-  <!-- CONTACTO -->
-  <section id="contacto" class="contacto">
-    <h2 class="section-title">Contacto & Comunidad</h2>
-    <p>¿Querés saber más o colaborar? Escribinos:</p>
-    <ul class="contacto-links">
-      <li>Email: <a href="mailto:isa@resilisa.store">isa@resilisa.store</a></li>
-      <li>Instagram: <a href="https://instagram.com/resilisa.store" target="_blank">@resilisa.store</a></li>
-      <li>TikTok: <a href="https://tiktok.com/@resilisa.store" target="_blank">@resilisa.store</a></li>
-    </ul>
-  </section>
+    <!-- Contact & Community Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contact & Community</h2>
+        <div class="contact-links">
+            <a href="mailto:isa@resilisa.store">isa@resilisa.store</a>
+            <a href="https://instagram.com/resilisa.store" target="_blank" rel="noopener noreferrer">@resilisa.store on Instagram</a>
+            <a href="https://tiktok.com/@resilisa.store" target="_blank" rel="noopener noreferrer">@resilisa.store on TikTok</a>
+        </div>
+    </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <img src="logo-blanco.png" alt="ResilIsA Logo" class="footer-logo">
-    <p>ResilIsA® — ART YOU WEAR</p>
-    <p>© 2025 Todos los derechos reservados</p>
-  </footer>
+    <!-- Footer -->
+    <footer class="footer">
+        <img src="assets/logo-blanco.png" alt="ResilIsA Logo" class="footer-logo">
+        <p>&copy; 2025 ResilIsA. All rights reserved.</p>
+    </footer>
 </body>
 </html>
