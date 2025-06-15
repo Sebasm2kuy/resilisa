@@ -1,0 +1,296 @@
+﻿/* --- VARIABLES Y ESTILOS GLOBALES --- */
+:root {
+    --bg-color: #0a0a0a; /* Un negro profundo y lujoso */
+    --text-color: #f0f0f0;
+    --accent-color: #D4AF37; /* Un dorado sutil, típico del lujo */
+    --gray-color: #1a1a1a;
+    --font-title: 'Playfair Display', serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+/* Reseteo básico y configuración global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* Ajusta el anclaje para que no quede oculto bajo la navbar fija */
+    scroll-padding-top: 80px; 
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.section-title {
+    font-family: var(--font-title);
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.content-section {
+    padding: 6rem 0;
+}
+
+/* --- BARRA DE NAVEGACIÓN --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.5rem 0;
+    background-color: rgba(10, 10, 10, 0.7); /* Fondo semi-transparente */
+    backdrop-filter: blur(10px); /* Efecto cristal esmerilado */
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 35px; /* Ajusta el tamaño de tu logo */
+}
+
+.nav-links a {
+    font-weight: 400;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-left: 2.5rem;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+
+/* --- SECCIÓN HERO --- */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    /* Imagen de fondo sin recortar */
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/portada.jpg');
+    background-size: cover; /* Cambiado a cover para una apariencia más premium. Si 'contain' es estricto, úsalo pero el efecto es menos inmersivo */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: var(--bg-color); /* Color de fondo por si la imagen no llena todo */
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-title {
+    font-family: var(--font-title);
+    font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+/* --- COLECCIÓN DESTACADA --- */
+#collection {
+    background-color: var(--gray-color);
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.product-item {
+    text-align: center;
+}
+
+.product-image-container {
+    background-color: var(--bg-color);
+    margin-bottom: 1.5rem;
+    overflow: hidden; /* Para contener la imagen */
+}
+
+.product-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene la proporción y llena el contenedor */
+    transition: transform 0.4s ease;
+}
+
+.product-item:hover .product-image-container img {
+    transform: scale(1.05);
+}
+
+.product-name {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+/* --- NUESTRA HISTORIA --- */
+.story-content {
+    max-width: 700px;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* --- CONTACTO --- */
+#contact {
+    background-color: var(--gray-color);
+}
+.contact-content {
+    text-align: center;
+}
+
+.contact-content p {
+    margin-bottom: 2rem;
+}
+
+.social-links a {
+    font-size: 1.2rem;
+    margin: 0 1.5rem;
+    font-weight: 600;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+
+/* --- FOOTER --- */
+.footer {
+    padding: 3rem 0;
+    background-color: #000;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-logo {
+    height: 40px;
+    margin: 0 auto 1.5rem auto;
+    opacity: 0.8;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+
+/* --- RESPONSIVE DESIGN (MÓVILES) --- */
+@media (max-width: 768px) {
+    html {
+        scroll-padding-top: 70px;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .content-section {
+        padding: 4rem 0;
+    }
+    
+    /* Navbar móvil */
+    .navbar {
+        padding: 1rem 0;
+    }
+    .nav-links a {
+        margin-left: 1.5rem;
+        font-size: 0.8rem;
+    }
+    .logo img {
+        height: 30px;
+    }
+
+    /* Hero móvil */
+    .hero-title {
+        font-size: 3rem;
+    }
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    /* Colección móvil (2 columnas) */
+    .collection-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    /* Contacto móvil */
+    .social-links a {
+        display: block;
+        margin: 1rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Colección móvil (1 columna) */
+    .collection-grid {
+        grid-template-columns: 1fr;
+    }
+}
