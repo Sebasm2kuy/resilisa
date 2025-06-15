@@ -1,286 +1,302 @@
-﻿/* --- VARIABLES Y ESTILOS GLOBALES --- */
-:root {
-    --bg-color: #ffffff;
-    --text-color: #1c1c1c;
-    --accent-color: #B98D43;
-    --alt-bg-color: #f7f7f7;
-    --font-title: 'Playfair Display', serif;
-    --font-body: 'Montserrat', sans-serif;
-}
-
-/* Reseteo básico y configuración global */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 90px; 
+﻿/* === Reset y Tipografía Global === */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
 }
 
 body {
-    font-family: var(--font-body);
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.7;
+    font-family: 'Cormorant Garamond', serif;
+    color: #000;
+    line-height: 1.6;
+    background: #FFF;
+    overflow-x: hidden;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-a {
-    color: var(--text-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-.section-title {
-    font-family: var(--font-title);
-    font-size: 3rem;
-    text-align: center;
-    margin-bottom: 3rem;
-    font-weight: 700;
+h1, h2, h3 {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 300;
     letter-spacing: 1px;
 }
 
-.content-section {
-    padding: 6rem 0;
-}
-
-.alt-bg {
-    background-color: var(--alt-bg-color);
-}
-
-/* --- BARRA DE NAVEGACIÓN --- */
-.navbar {
+/* === Header y Navegación === */
+header {
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-    z-index: 1000;
-    padding: 1.5rem 0;
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-.navbar-content {
+    padding: 20px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(10px); /* Efecto de desenfoque para navegadores modernos */
+    z-index: 100;
+    border-bottom: 1px solid #f0f0f0;
 }
 
-.logo img {
-    height: 50px; /* Logo más grande */
+.logo-container {
+    height: 40px;
 }
 
-.nav-links a {
-    font-weight: 400;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin-left: 2.5rem;
+.logo-container img {
+    height: 100%;
+    width: auto;
+    display: block;
 }
 
-.nav-links a:hover {
-    color: var(--accent-color);
+nav ul {
+    display: flex;
+    list-style: none;
 }
 
+nav ul li {
+    margin-left: 30px;
+}
 
-/* --- SECCIÓN HERO --- */
-.hero-section {
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #C0A080;
+}
+
+/* === Hero Section === */
+.hero {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/portada.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+    background: url('https://images.unsplash.com/photo-1527719327859-c6ce80353573?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80') no-repeat center center/cover;
+    position: relative;
+    padding-top: 80px; /* Compensa el header fijo */
+    color: #000;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
 }
 
 .hero-content {
-    max-width: 800px;
-}
-
-.hero-title {
-    font-family: var(--font-title);
-    font-size: 5rem;
-    font-weight: 700;
-    letter-spacing: 3px;
-    color: #fff;
-    margin-bottom: 1rem;
-}
-
-.hero-subtitle {
-    font-size: 1.2rem;
-    font-weight: 300;
-    margin-bottom: 2rem;
-    color: rgba(255, 255, 255, 0.9);
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 1rem 2.5rem;
-    background-color: var(--bg-color);
-    border: 2px solid var(--bg-color);
-    color: var(--text-color);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: transparent;
-    color: var(--bg-color);
-}
-
-/* --- COLECCIÓN DESTACADA --- */
-.collection-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-}
-
-.product-item {
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
-.product-image-container {
-    background-color: #fff;
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    border: 1px solid var(--alt-bg-color); /* Borde sutil */
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 300;
 }
 
-.product-image-container img {
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #000;
+    color: #FFF;
+    border: 1px solid #000;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #C0A080;
+    color: #000;
+    border-color: #C0A080;
+}
+
+/* === Grilla de Productos === */
+.products {
+    padding: 100px 5%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 32px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.product-card img {
     width: 100%;
-    height: 100%;
-    object-fit: contain;
-    transition: transform 0.4s ease;
+    height: auto;
+    transition: transform 0.5s ease;
+    display: block;
 }
 
-.product-item:hover .product-image-container img {
+.product-card:hover img {
     transform: scale(1.05);
 }
 
-.product-name {
-    font-family: var(--font-body);
-    font-size: 1.1rem;
-    font-weight: 400;
-    letter-spacing: 1px;
-}
-
-/* --- NUESTRA HISTORIA --- */
-.story-content {
-    max-width: 700px;
-    text-align: center;
-    font-size: 1.1rem;
-    line-height: 1.8;
-}
-
-/* --- CONTACTO --- */
-.contact-content {
+.product-info {
+    padding: 20px 0;
     text-align: center;
 }
 
-.contact-content p {
-    margin-bottom: 2rem;
+.product-info h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: 400; /* Damos un poco más de peso */
+}
+
+.product-info .price {
+    font-size: 16px;
+    color: #555;
+}
+
+/* === Footer === */
+footer {
+    padding: 50px 5%;
+    background: #f9f9f9;
+    text-align: center;
+    border-top: 1px solid #f0f0f0;
+}
+
+.newsletter {
+    margin-bottom: 40px;
+}
+
+.newsletter h3 {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.newsletter input {
+    padding: 10px 15px;
+    width: 300px;
+    max-width: 100%;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    gap: 15px 30px;
+}
+
+.footer-links a {
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #C0A080;
+}
+
+.social-links {
+    margin-bottom: 30px;
 }
 
 .social-links a {
-    font-size: 1.2rem;
-    margin: 0 1.5rem;
-    font-weight: 600;
+    margin: 0 10px;
+    color: #000;
+    font-size: 18px;
+    transition: color 0.3s ease;
 }
 
 .social-links a:hover {
-    color: var(--accent-color);
-}
-
-/* --- FOOTER --- */
-.footer {
-    padding: 3rem 0;
-    background-color: var(--alt-bg-color);
-}
-
-.footer-content {
-    text-align: center;
-}
-
-.footer-logo {
-    height: 50px;
-    margin: 0 auto 1.5rem auto;
+    color: #C0A080;
 }
 
 .copyright {
-    font-size: 0.9rem;
-    color: #888;
+    font-size: 12px;
+    color: #999;
 }
 
 
-/* --- RESPONSIVE DESIGN (MÓVILES) --- */
+/* === Clase de Utilidad para Accesibilidad === */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+
+/* === Diseño Responsivo (Responsive) === */
 @media (max-width: 768px) {
-    html {
-        scroll-padding-top: 80px;
-    }
-
-    .section-title {
-        font-size: 2.2rem;
-    }
-
-    .content-section {
-        padding: 4rem 0;
+    header {
+        padding: 15px 5%;
+        /* En un futuro, aquí irían los estilos para el menú de hamburguesa */
     }
     
-    .nav-links a {
-        margin-left: 1.5rem;
-        font-size: 0.8rem;
-    }
-    .logo img {
-        height: 40px;
-    }
-
-    .hero-title {
-        font-size: 3rem;
-    }
-    .hero-subtitle {
-        font-size: 1rem;
+    nav ul {
+        /* Para un menú de hamburguesa, esto sería 'display: none;' o similar */
+        flex-direction: column; /* Temporalmente para evitar que se rompa feo */
+        position: absolute;
+        top: 60px; right: 5%;
+        background: white;
+        padding: 10px;
+        border-radius: 5px;
+        /* ESTO ES TEMPORAL HASTA IMPLEMENTAR JS */
+        display: none; /* Oculta el menú en móvil por ahora. Necesitarás JS para mostrarlo */
     }
 
-    .collection-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
+    nav ul li {
+        margin: 10px 0;
     }
     
-    .social-links a {
-        display: block;
-        margin: 1rem 0;
+    .hero-content h1 {
+        font-size: 36px;
     }
-}
+    
+    .hero-content p {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+    
+    .newsletter form {
+        flex-direction: column;
+        align-items: center;
+    }
 
-@media (max-width: 480px) {
-    .collection-grid {
-        grid-template-columns: 1fr;
-    }
-    .product-image-container {
-        height: 350px;
+    .newsletter input {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
     }
 }

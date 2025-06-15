@@ -3,104 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ResilIsA - Art You Wear</title>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- Título y Meta Descripción para SEO -->
+    <title>Resilisa | Art You Wear</title>
+    <meta name="description" content="Descubre la colección de camisetas exclusivas de Resilisa. Diseños de autor y estampados All Over Print que convierten cada prenda en una obra de arte.">
     
-    <!-- Hoja de Estilos -->
-    <link rel="stylesheet" href="styles/styles.css">
+    <!-- Favicon (icono de la pestaña del navegador) -->
+    <link rel="icon" href="favicon.png" type="image/png">
+    
+    <!-- Hoja de Estilos CSS Externa -->
+    <link rel="stylesheet" href="estilos.css">
+    
+    <!-- Fuentes y Iconos Externos -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Helvetica+Neue:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-
-    <!-- ======== BARRA DE NAVEGACIÓN ======== -->
-    <header class="navbar">
-        <div class="container navbar-content">
-            <a href="#hero" class="logo">
-                <img src="images/logo-negro.png" alt="Logo ResilIsA">
-            </a>
-            <nav class="nav-links">
-                <a href="#collection">Colección</a>
-                <a href="#story">Nuestra Historia</a>
-                <a href="#contact">Contacto</a>
-            </nav>
+    <header>
+        <div class="logo-container">
+            <!-- NOTA: Asegúrate de que el archivo 'logo-negro.png' exista -->
+            <img src="logo-negro.png" alt="Logo de Resilisa - Art You Wear">
         </div>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/coleccion">Colección</a></li>
+                <li><a href="/lookbook">Lookbook</a></li>
+                <li><a href="/historia">Historia</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+                <li><a href="/buscar" aria-label="Buscar en el sitio"><i class="fas fa-search"></i></a></li>
+                <li><a href="/carrito" aria-label="Ver cesta de la compra"><i class="fas fa-shopping-bag"></i></a></li>
+            </ul>
+        </nav>
     </header>
-
+    
     <main>
-        <!-- ======== SECCIÓN HERO ======== -->
-        <section id="hero" class="hero-section">
+        <section class="hero">
             <div class="hero-content">
-                <h1 class="hero-title">ART YOU WEAR</h1>
-                <p class="hero-subtitle">Camisetas únicas con arte, tecnología y resiliencia. Edición limitada, impresas all-over.</p>
-                <a href="#collection" class="cta-button">Ver Colección</a>
+                <h1>ARTE VESTIBLE</h1>
+                <p>Descubre nuestra exclusiva colección de T-Shirts All Over Print, donde cada pieza es un lienzo de diseño único.</p>
+                <a href="/coleccion" class="btn">DESCUBRIR COLECCIÓN</a>
             </div>
         </section>
+        
+        <section class="products">
+            <h2 class="section-title">COLECCIÓN SIGNATURE</h2>
+            <div class="product-grid">
+                
+                <figure class="product-card">
+                    <!-- NOTA: Usa loading="lazy" para mejorar la velocidad de carga -->
+                    <img src="producto1.png" alt="Camiseta de diseño exclusivo modelo Recora N.C.601, con estampado abstracto." loading="lazy">
+                    <figcaption class="product-info">
+                        <h3>RECORA N.C.601</h3>
+                        <p class="price">€89.00</p>
+                    </figcaption>
+                </figure>
+                
+                <figure class="product-card">
+                    <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-1.2.1&auto=format&fit=crop&w=925&q=80" alt="Modelo vistiendo una camiseta blanca con un estampado de texto 'love more'." loading="lazy">
+                    <figcaption class="product-info">
+                        <h3>Botanical Noir</h3>
+                        <p class="price">€89.00</p>
+                    </figcaption>
+                </figure>
+                
+                <figure class="product-card">
+                    <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-1.2.1&auto=format&fit=crop&w=925&q=80" alt="Hombre de espaldas vistiendo una camiseta oscura con diseño gráfico." loading="lazy">
+                    <figcaption class="product-info">
+                        <h3>Geometric Bloom</h3>
+                        <p class="price">€89.00</p>
+                    </figcaption>
+                </figure>
 
-        <!-- ======== COLECCIÓN DESTACADA ======== -->
-        <section id="collection" class="content-section">
-            <div class="container">
-                <h2 class="section-title">Colección Destacada</h2>
-                <div class="collection-grid">
-                    <div class="product-item">
-                        <div class="product-image-container">
-                           <img src="images/producto1.jpg" alt="Camiseta The Last Library">
-                        </div>
-                        <h3 class="product-name">The Last Library</h3>
-                    </div>
-                    <div class="product-item">
-                        <div class="product-image-container">
-                           <img src="images/producto2.jpg" alt="Camiseta Anatomy of Flight">
-                        </div>
-                        <h3 class="product-name">Anatomy of Flight</h3>
-                    </div>
-                    <div class="product-item">
-                        <div class="product-image-container">
-                           <img src="images/producto3.jpg" alt="Camiseta Bio-Mechanical Bloom">
-                        </div>
-                        <h3 class="product-name">Bio-Mechanical Bloom</h3>
-                    </div>
-                    <div class="product-item">
-                        <div class="product-image-container">
-                           <img src="images/producto4.jpg" alt="Camiseta Suburban Inversion">
-                        </div>
-                        <h3 class="product-name">Suburban Inversion</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ======== NUESTRA HISTORIA ======== -->
-        <section id="story" class="content-section alt-bg">
-            <div class="container story-content">
-                <h2 class="section-title">Nuestra Historia</h2>
-                <p>ResilIsA nace de la unión entre resiliencia y arte digital, honrando la memoria de Isa, mi madre. Cada camiseta es una obra inspirada en tecnología, filosofía y cultura pop.</p>
-            </div>
-        </section>
-
-        <!-- ======== CONTACTO Y COMUNIDAD ======== -->
-        <section id="contact" class="content-section">
-            <div class="container contact-content">
-                <h2 class="section-title">Contacto y Comunidad</h2>
-                <p>Únete a nuestra comunidad y comparte tu estilo.</p>
-                <div class="social-links">
-                    <a href="mailto:isa@resilisa.store" target="_blank">isa@resilisa.store</a>
-                    <a href="https://instagram.com/resilisa.store" target="_blank">Instagram</a>
-                    <a href="https://tiktok.com/@resilisa.store" target="_blank">TikTok</a>
-                </div>
             </div>
         </section>
     </main>
-
-    <!-- ======== FOOTER ======== -->
-    <footer class="footer">
-        <div class="container footer-content">
-            <img src="images/logo-negro.png" alt="Logo ResilIsA" class="footer-logo">
-            <p class="copyright">© 2024 ResilIsA. Todos los derechos reservados.</p>
+    
+    <footer>
+        <div class="newsletter">
+            <h3>ÚNETE A NUESTRA COMUNIDAD</h3>
+            <form>
+                <!-- Label para accesibilidad, oculta con CSS -->
+                <label for="email-newsletter" class="visually-hidden">Tu dirección de email</label>
+                <input type="email" id="email-newsletter" placeholder="Tu dirección de email" required>
+                <button type="submit" class="btn">SUSCRIBIRSE</button>
+            </form>
         </div>
+        
+        <div class="footer-links">
+            <a href="/envios">Envíos</a>
+            <a href="/devoluciones">Devoluciones</a>
+            <a href="/contacto">Contacto</a>
+            <a href="/terminos">Términos</a>
+            <a href="/privacidad">Privacidad</a>
+        </div>
+        
+        <div class="social-links">
+            <a href="#" aria-label="Visita nuestro Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Visita nuestro Pinterest"><i class="fab fa-pinterest"></i></a>
+            <a href="#" aria-label="Visita nuestro Facebook"><i class="fab fa-facebook-f"></i></a>
+        </div>
+        
+        <p class="copyright">© 2025 RESILISA. Todos los derechos reservados.</p>
     </footer>
-
 </body>
 </html>
