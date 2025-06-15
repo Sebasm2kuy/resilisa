@@ -1,9 +1,9 @@
 ﻿/* --- VARIABLES Y ESTILOS GLOBALES --- */
 :root {
     --bg-color: #ffffff;
-    --text-color: #1c1c1c; /* Un negro suave, no tan duro como el #000 */
-    --accent-color: #B98D43; /* Un dorado más cálido y visible en fondo blanco */
-    --alt-bg-color: #f7f7f7; /* Un gris muy claro para alternar fondos */
+    --text-color: #1c1c1c;
+    --accent-color: #B98D43;
+    --alt-bg-color: #f7f7f7;
     --font-title: 'Playfair Display', serif;
     --font-body: 'Montserrat', sans-serif;
 }
@@ -69,7 +69,7 @@ img {
     width: 100%;
     z-index: 1000;
     padding: 1.5rem 0;
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
+    background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
@@ -105,7 +105,6 @@ img {
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* Mantenemos el overlay oscuro para que el texto blanco siempre sea legible sobre cualquier imagen */
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/portada.jpg');
     background-size: cover;
     background-position: center center;
@@ -121,7 +120,7 @@ img {
     font-size: 5rem;
     font-weight: 700;
     letter-spacing: 3px;
-    color: #fff; /* Texto blanco para contraste con el fondo */
+    color: #fff;
     margin-bottom: 1rem;
 }
 
@@ -161,19 +160,20 @@ img {
 }
 
 .product-image-container {
-    background-color: #fff; /* Fondo blanco explícito */
-    height: 400px; /* Altura fija para alinear todas las imágenes */
+    background-color: #fff;
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 1.5rem;
     padding: 1rem;
+    border: 1px solid var(--alt-bg-color); /* Borde sutil */
 }
 
 .product-image-container img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Muestra la imagen completa sin recortar */
+    object-fit: contain;
     transition: transform 0.4s ease;
 }
 
